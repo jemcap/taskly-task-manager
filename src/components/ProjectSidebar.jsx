@@ -1,11 +1,12 @@
 import React from "react";
+import Button from "./Button";
 
-const ProjectSidebar = () => {
+const ProjectSidebar = ({ onStartAddProject }) => {
   return (
     <aside>
       <h2>Your Projects</h2>
       <div>
-        <button>+ Add Projects</button>
+        <Button onClick={onStartAddProject}>+ Add Projects</Button>
       </div>
       <ul></ul>
     </aside>
