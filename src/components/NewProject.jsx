@@ -3,7 +3,7 @@ import Input from "./Input";
 
 const NewProject = () => {
   return (
-    <div>
+    <div className="w-[35rem] mt-16">
       <menu>
         <li>
           <button>Cancel</button>
@@ -15,7 +15,7 @@ const NewProject = () => {
       <div>
         <Input label="Title" />
         <Input label="Description" textarea />
-        <Input label="Due Date" />
+        <Input type="date" label="Due Date" />
       </div>
     </div>
   );
