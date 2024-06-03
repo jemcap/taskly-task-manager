@@ -6,6 +6,7 @@ const SelectedProject = ({
   onDeleteProject,
   onAddTasks,
   onDeleteTasks,
+  tasks,
 }) => {
   const formattedDate = new Date(project.dueDate).toLocaleString("en-GB", {
     year: "numeric",
@@ -32,7 +33,7 @@ const SelectedProject = ({
         </p>
       </header>
       <div>
-        <Task onAdd={onAddTasks} />
+        <Task onAdd={onAddTasks} tasks={tasks} />
       </div>
     </div>
   );

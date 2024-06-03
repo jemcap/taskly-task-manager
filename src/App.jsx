@@ -90,6 +90,7 @@ function App() {
       project={selectedProject}
       onDeleteProject={handleDeleteProject}
       onAddTasks={handleAddTasks}
+      tasks={projectState.tasks}
     />
   );
 

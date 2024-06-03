@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 export const NewTask = ({ onAdd }) => {
-  const [enteredTask, setEnteredTask] = useState();
+  const [enteredTask, setEnteredTask] = useState("");
 
-  function handleClick(e) {
+  function handleClick() {
     setEnteredTask("");
     onAdd(enteredTask);
   }
