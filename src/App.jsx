@@ -70,7 +70,7 @@ function App() {
       const newTask = {
         item: item,
         projectId: prev.selectedProjectId,
-        id: Math.floor(Math.random() * 1000),
+        id: Math.floor(Math.random() * 10000),
       };
       return {
         ...prev,
