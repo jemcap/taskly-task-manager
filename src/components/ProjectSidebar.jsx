@@ -4,15 +4,15 @@ import Button from "./Button";
 const ProjectSidebar = ({ onStartAddProject, project }) => {
   return (
     <aside className="w-full md:w-1/3 px-8 py-16 bg-stone-900 text-stone-50 rounded-r-xl flex flex-col items-center md:items-start">
-      <h2 className="mb-8 font-bold uppercase text-xl text-stone-200">
-        Your Projects
-      </h2>
-      <div className="w-full mb-8">
+      <div className="w-full flex items-center justify-between mb-8">
+        <h2 className="font-bold uppercase text-xl text-stone-200">
+          Your Projects
+        </h2>
         <Button
           onClick={onStartAddProject}
-          className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:scale-105"
+          className="w-12 h-12 bg-blue-500 hover:bg-blue-700 text-white font-bold text-lg flex items-center justify-center rounded-full transition duration-300 ease-in-out transform hover:scale-105"
         >
-          + Add Projects
+          +
         </Button>
       </div>
       <ul className="w-full flex-grow space-y-4">
