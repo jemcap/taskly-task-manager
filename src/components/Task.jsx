@@ -1,7 +1,7 @@
 import React from "react";
 import { NewTask } from "./NewTask";
 
-const Task = ({ tasks, onAdd }) => {
+const Task = ({ tasks, onAdd, onDeleteTasks }) => {
   return (
     <div>
       <h1 className="text-2xl font-bold text-gray-700 mb-4">Tasks</h1>
@@ -15,9 +15,11 @@ const Task = ({ tasks, onAdd }) => {
               className="flex items-center justify-between py-2 border-b border-gray-300"
             >
               <span className="text-gray-800">{task.item}</span>
-              <button className="py-1 px-2 bg-red-500 text-white rounded-md hover:bg-red-600">
-                Clear
-              </button>
+              <input
+                type="checkbox"
+                onChange={() => onDeleteTasks(task.id)}
+                className="ml-4"
+              />
             </li>
           ))}
         </ul>
