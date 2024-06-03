@@ -15,9 +15,16 @@ const ProjectSidebar = ({ onStartAddProject, project }) => {
           + Add Projects
         </Button>
       </div>
-      <ul className="w-full flex-grow">
+      <ul className="w-full flex-grow space-y-4">
         {project.map((project) => (
-          <li>{project.title}</li>
+          <li
+            key={project.id}
+            className="flex items-center p-4  bg-stone-800 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 ease-in-out"
+          >
+            <button className="flex-grow text-left p-4 text-sm font-medium text-white border-l-4 border-blue-500 hover:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all duration-300 ease-in-out">
+              {project.title}
+            </button>
+          </li>
         ))}
       </ul>
     </aside>
